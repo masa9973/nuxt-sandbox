@@ -7,10 +7,10 @@ export default defineNuxtConfig({
             prerender: false,
         },
         "/hoge": {
-            prerender: true,
+            prerender: process.env.HOGE_DIR_PRERENDERING === "true",
         },
         "/fuga": {
-            prerender: false,
+            prerender: process.env.FUGA_DIR_PRERENDERING === "true",
         },
     },
 });
